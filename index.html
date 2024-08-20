@@ -12,13 +12,10 @@
             color: #333;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            overflow-y: scroll;
             height: 100vh;
             text-align: center;
-            overflow: hidden;
+            scroll-behavior: smooth;
             animation: backgroundTransition 10s infinite alternate;
         }
 
@@ -40,12 +37,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border-radius: 10px 10px 0 0;
             font-family: 'Great Vibes', cursive;
-            animation: fadeInTitle 2s ease-in-out forwards;
-        }
-
-        @keyframes fadeInTitle {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+            margin: 0 auto;
         }
 
         header h1 {
@@ -57,18 +49,13 @@
         section {
             background-color: white;
             padding: 50px;
-            margin: 20px;
+            margin: 20px auto;
             border-radius: 0 0 10px 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             width: 90%;
             max-width: 800px;
             font-size: 1.4em;
-            animation: fadeInSection 2s ease-in-out forwards;
-        }
-
-        @keyframes fadeInSection {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            line-height: 1.5;
         }
 
         .quote {
@@ -325,6 +312,11 @@
         revealButton.addEventListener('click', () => {
             hiddenMessage.style.display = 'block';
             revealButton.style.display = 'none';
+        });
+
+        // Scroll to the top on page load
+        window.addEventListener('load', () => {
+            window.scrollTo(0, 0);
         });
     </script>
 
