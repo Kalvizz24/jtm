@@ -35,7 +35,8 @@
             background-color: #ff6f61;
             color: white;
             padding: 20px;
-            width: 100%;
+            width: 90%;
+            max-width: 800px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border-radius: 10px 10px 0 0;
             font-family: 'Great Vibes', cursive;
@@ -55,14 +56,14 @@
 
         section {
             background-color: white;
-            padding: 40px;
+            padding: 20px;
             margin: 20px;
             border-radius: 0 0 10px 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            max-width: 600px;
+            width: 90%;
+            max-width: 800px;
             font-family: 'Great Vibes', cursive;
-            font-size: 1.2em; /* Réduit la taille de la police pour le dézoom */
+            font-size: 1.1em; /* Réduit la taille de la police pour le dézoom */
             animation: fadeInSection 2s ease-in-out forwards;
         }
 
@@ -112,7 +113,7 @@
         .hidden-message {
             display: none;
             font-family: 'Georgia', serif;
-            font-size: 1.2em;
+            font-size: 1.1em;
             margin-top: 20px;
             color: #ff6f61;
         }
@@ -136,6 +137,8 @@
         audio {
             margin-top: 30px;
             outline: none;
+            width: 100%;
+            max-width: 400px;
         }
 
         footer {
@@ -217,6 +220,62 @@
             animation-duration: 28s;
         }
 
+        /* Styles Responsifs */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            section {
+                font-size: 1em;
+                padding: 15px;
+            }
+
+            .quote:before, .quote:after {
+                font-size: 1.2em;
+            }
+
+            .hidden-message {
+                font-size: 1em;
+            }
+
+            #revealButton {
+                font-size: 0.9em;
+                padding: 8px 16px;
+            }
+
+            footer {
+                font-size: 0.8em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            section {
+                font-size: 0.9em;
+                padding: 10px;
+            }
+
+            .quote:before, .quote:after {
+                font-size: 1em;
+            }
+
+            .hidden-message {
+                font-size: 0.9em;
+            }
+
+            #revealButton {
+                font-size: 0.8em;
+                padding: 6px 12px;
+            }
+
+            footer {
+                font-size: 0.7em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -237,9 +296,6 @@
 
         <p class="quote">Être profondément aimé par quelqu'un vous donne de la force, tandis qu'aimer profondément quelqu'un vous donne du courage.</p>
         <p class="author">- Lao Tzu</p>
-
-        <p class="quote">L'amour est comme un voyage en mer : il peut être calme et paisible ou mouvementé et turbulent, mais il est toujours beau et précieux.</p>
-        <p class="author">- Inconnu</p>
 
         <p class="quote">Partout où je regarde, je pense à toi. Ton sourire illumine mes jours et ton amour guide mon chemin.</p>
         <p class="author">- XXX</p>
