@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pour Toi,</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+            animation: backgroundTransition 10s infinite alternate;
+        }
+
+        @keyframes backgroundTransition {
+            from {
+                background: linear-gradient(to right, #ffecd2, #fcb69f);
+            }
+            to {
+                background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+            }
+        }
+
+        header {
+            background-color: #ff6f61;
+            color: white;
+            padding: 20px;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px 10px 0 0;
+            font-family: 'Great Vibes', cursive;
+            animation: fadeInTitle 2s ease-in-out forwards;
+        }
+
+        @keyframes fadeInTitle {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em; /* Réduit la taille de la police pour le dézoom */
+            letter-spacing: 1px;
+        }
+
+        section {
+            background-color: white;
+            padding: 40px;
+            margin: 20px;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.2em; /* Réduit la taille de la police pour le dézoom */
+            animation: fadeInSection 2s ease-in-out forwards;
+        }
+
+        @keyframes fadeInSection {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .quote {
+            font-style: italic;
+            margin: 20px 0;
+            opacity: 0;
+            animation: fadeInQuote 3s ease-in-out forwards;
+        }
+
+        @keyframes fadeInQuote {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .quote:before {
+            content: open-quote;
+            font-size: 1.5em;
+            color: #ff6f61;
+            vertical-align: bottom;
+            line-height: 0.1em;
+            margin-right: 10px;
+        }
+
+        .quote:after {
+            content: close-quote;
+            font-size: 1.5em;
+            color: #ff6f61;
+            vertical-align: bottom;
+            line-height: 0.1em;
+            margin-left: 10px;
+        }
+
+        .author {
+            text-align: right;
+            font-size: 0.9em;
+            margin-top: 10px;
+            color: #666;
+            font-family: 'Georgia', serif;
+        }
+
+        .hidden-message {
+            display: none;
+            font-family: 'Georgia', serif;
+            font-size: 1.2em;
+            margin-top: 20px;
+            color: #ff6f61;
+        }
+
+        #revealButton {
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #revealButton:hover {
+            background-color: #ff3d41;
+        }
+
+        audio {
+            margin-top: 30px;
+            outline: none;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #888;
+            font-family: 'Georgia', serif;
+        }
+
+        footer a {
+            color: #ff6f61;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Effet de neige tombante */
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            width: 15px;
+            height: 15px;
+            background-color: white;
+            opacity: 0.8;
+            border-radius: 50%;
+            animation: fall 10s linear infinite;
+        }
+
+        @keyframes fall {
+            0% { top: -10px; opacity: 0; }
+            50% { opacity: 0.8; }
+            100% { top: 100vh; opacity: 0; }
+        }
+
+        .snowflake:nth-child(2) {
+            left: 10%;
+            animation-duration: 12s;
+        }
+
+        .snowflake:nth-child(3) {
+            left: 20%;
+            animation-duration: 14s;
+        }
+
+        .snowflake:nth-child(4) {
+            left: 30%;
+            animation-duration: 16s;
+        }
+
+        .snowflake:nth-child(5) {
+            left: 40%;
+            animation-duration: 18s;
+        }
+
+        .snowflake:nth-child(6) {
+            left: 50%;
+            animation-duration: 20s;
+        }
+
+        .snowflake:nth-child(7) {
+            left: 60%;
+            animation-duration: 22s;
+        }
+
+        .snowflake:nth-child(8) {
+            left: 70%;
+            animation-duration: 24s;
+        }
+
+        .snowflake:nth-child(9) {
+            left: 80%;
+            animation-duration: 26s;
+        }
+
+        .snowflake:nth-child(10) {
+            left: 90%;
+            animation-duration: 28s;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Pour Toi, _________</h1>
+    </header>
+
+    <section>
+        <p class="quote">L'amour est cette merveilleuse chance qu'un autre vous aime encore quand vous ne pouvez plus vous aimer vous-même.</p>
+        <p class="author">- Jean Guéhenno</p>
+
+        <p class="quote">L'amour véritable ne se mesure pas à ce que nous faisons pour quelqu'un, mais à la façon dont nous nous sentons à propos de cette personne.</p>
+        <p class="author">- Inconnu</p>
+
+        <p class="quote">Je t'aime non seulement pour ce que tu es, mais pour ce que je suis quand nous sommes ensemble.</p>
+        <p class="author">- Roy Croft</p>
+
+        <p class="quote">Être profondément aimé par quelqu'un vous donne de la force, tandis qu'aimer profondément quelqu'un vous donne du courage.</p>
+        <p class="author">- Lao Tzu</p>
+
+        <p class="quote">L'amour est comme un voyage en mer : il peut être calme et paisible ou mouvementé et turbulent, mais il est toujours beau et précieux.</p>
+        <p class="author">- Inconnu</p>
+
+        <p class="quote">Partout où je regarde, je pense à toi. Ton sourire illumine mes jours et ton amour guide mon chemin.</p>
+        <p class="author">- XXX</p>
+        
+        <button id="revealButton">Clique ici pour révéler un message caché</button>
+        <p class="hidden-message">Tu es la personne la plus spéciale pour moi, et je te suis reconnaissant pour chaque instant que nous partageons. ❤</p>
+
+        <audio controls>
+            <source src="jtmclara.mp3" type="audio/mpeg">
+            Votre navigateur ne supporte pas l'élément audio.
+        </audio>
+    </section>
+
+    <footer>
+        <p>Créé avec 💖 par <a href="#">XXX</a></p>
+    </footer>
+
+    <!-- Effet de neige tombante -->
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+    <div class="snowflake"></div>
+
+    <script>
+        const revealButton = document.getElementById('revealButton');
+        const hiddenMessage = document.querySelector('.hidden-message');
+
+        revealButton.addEventListener('click', () => {
+            hiddenMessage.style.display = 'block';
+            revealButton.style.display = 'none';
+        });
+    </script>
+
+</body>
+</html>
