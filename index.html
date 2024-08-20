@@ -34,7 +34,7 @@
         header {
             background-color: #ff6f61;
             color: white;
-            padding: 20px;
+            padding: 30px;
             width: 90%;
             max-width: 800px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -50,20 +50,20 @@
 
         header h1 {
             margin: 0;
-            font-size: 3em; /* Augmente la taille de la police pour une meilleure lisibilité */
+            font-size: 4em; /* Augmente la taille de la police pour une meilleure lisibilité */
             letter-spacing: 1px;
         }
 
         section {
             background-color: white;
-            padding: 30px;
+            padding: 40px;
             margin: 20px;
             border-radius: 0 0 10px 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             width: 90%;
             max-width: 800px;
             font-family: 'Great Vibes', cursive;
-            font-size: 1.3em; /* Augmente la taille de la police pour une meilleure lisibilité */
+            font-size: 1.5em; /* Augmente la taille de la police pour une meilleure lisibilité */
             animation: fadeInSection 2s ease-in-out forwards;
         }
 
@@ -74,7 +74,7 @@
 
         .quote {
             font-style: italic;
-            margin: 20px 0;
+            margin: 30px 0; /* Augmente l'espace autour des citations */
             opacity: 0;
             animation: fadeInQuote 3s ease-in-out forwards;
         }
@@ -86,7 +86,7 @@
 
         .quote:before {
             content: open-quote;
-            font-size: 2em;
+            font-size: 2.5em; /* Augmente la taille des guillemets */
             color: #ff6f61;
             vertical-align: bottom;
             line-height: 0.1em;
@@ -95,7 +95,7 @@
 
         .quote:after {
             content: close-quote;
-            font-size: 2em;
+            font-size: 2.5em; /* Augmente la taille des guillemets */
             color: #ff6f61;
             vertical-align: bottom;
             line-height: 0.1em;
@@ -104,7 +104,7 @@
 
         .author {
             text-align: right;
-            font-size: 1.1em;
+            font-size: 1.3em; /* Augmente la taille de la police de l'auteur */
             margin-top: 10px;
             color: #666;
             font-family: 'Georgia', serif;
@@ -113,19 +113,19 @@
         .hidden-message {
             display: none;
             font-family: 'Georgia', serif;
-            font-size: 1.3em;
-            margin-top: 20px;
+            font-size: 1.5em; /* Augmente la taille de la police du message caché */
+            margin-top: 30px;
             color: #ff6f61;
         }
 
         #revealButton {
             margin-top: 30px;
-            padding: 12px 24px;
+            padding: 15px 30px;
             background-color: #ff6f61;
             color: white;
             border: none;
             border-radius: 5px;
-            font-size: 1.2em;
+            font-size: 1.3em; /* Augmente la taille de la police du bouton */
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
@@ -138,12 +138,12 @@
             margin-top: 30px;
             outline: none;
             width: 100%;
-            max-width: 500px;
+            max-width: 600px; /* Augmente la taille maximale de l'audio */
         }
 
         footer {
             margin-top: 30px;
-            font-size: 1em;
+            font-size: 1.2em; /* Augmente la taille de la police du footer */
             color: #888;
             font-family: 'Georgia', serif;
         }
@@ -161,8 +161,8 @@
         .snowflake {
             position: absolute;
             top: -10px;
-            width: 20px; /* Augmente la taille des flocons de neige */
-            height: 20px;
+            width: 25px; /* Augmente la taille des flocons de neige */
+            height: 25px;
             background-color: white;
             opacity: 0.8;
             border-radius: 50%;
@@ -223,11 +223,39 @@
         /* Styles Responsifs */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2.5em; /* Ajuste la taille de la police pour les tablettes */
+                font-size: 3em; /* Ajuste la taille de la police pour les tablettes */
             }
 
             section {
-                font-size: 1.2em; /* Ajuste la taille de la police pour les tablettes */
+                font-size: 1.3em; /* Ajuste la taille de la police pour les tablettes */
+                padding: 30px;
+            }
+
+            .quote:before, .quote:after {
+                font-size: 2em;
+            }
+
+            .hidden-message {
+                font-size: 1.3em;
+            }
+
+            #revealButton {
+                font-size: 1.1em;
+                padding: 12px 25px;
+            }
+
+            footer {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2.5em; /* Ajuste la taille de la police pour les téléphones */
+            }
+
+            section {
+                font-size: 1.2em; /* Ajuste la taille de la police pour les téléphones */
                 padding: 20px;
             }
 
@@ -248,34 +276,6 @@
                 font-size: 0.9em;
             }
         }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 2em; /* Ajuste la taille de la police pour les téléphones */
-            }
-
-            section {
-                font-size: 1em; /* Ajuste la taille de la police pour les téléphones */
-                padding: 15px;
-            }
-
-            .quote:before, .quote:after {
-                font-size: 1.5em;
-            }
-
-            .hidden-message {
-                font-size: 1em;
-            }
-
-            #revealButton {
-                font-size: 0.9em;
-                padding: 8px 16px;
-            }
-
-            footer {
-                font-size: 0.8em;
-            }
-        }
     </style>
 </head>
 <body>
@@ -287,9 +287,6 @@
     <section>
         <p class="quote">L'amour est cette merveilleuse chance qu'un autre vous aime encore quand vous ne pouvez plus vous aimer vous-même.</p>
         <p class="author">- Jean Guéhenno</p>
-
-        <p class="quote">L'amour véritable ne se mesure pas à ce que nous faisons pour quelqu'un, mais à la façon dont nous nous sentons à propos de cette personne.</p>
-        <p class="author">- Inconnu</p>
 
         <p class="quote">Je t'aime non seulement pour ce que tu es, mais pour ce que je suis quand nous sommes ensemble.</p>
         <p class="author">- Roy Croft</p>
