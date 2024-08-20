@@ -50,20 +50,20 @@
 
         header h1 {
             margin: 0;
-            font-size: 2.5em; /* Réduit la taille de la police pour le dézoom */
+            font-size: 3em; /* Augmente la taille de la police pour une meilleure lisibilité */
             letter-spacing: 1px;
         }
 
         section {
             background-color: white;
-            padding: 20px;
+            padding: 30px;
             margin: 20px;
             border-radius: 0 0 10px 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             width: 90%;
             max-width: 800px;
             font-family: 'Great Vibes', cursive;
-            font-size: 1.1em; /* Réduit la taille de la police pour le dézoom */
+            font-size: 1.3em; /* Augmente la taille de la police pour une meilleure lisibilité */
             animation: fadeInSection 2s ease-in-out forwards;
         }
 
@@ -86,7 +86,7 @@
 
         .quote:before {
             content: open-quote;
-            font-size: 1.5em;
+            font-size: 2em;
             color: #ff6f61;
             vertical-align: bottom;
             line-height: 0.1em;
@@ -95,7 +95,7 @@
 
         .quote:after {
             content: close-quote;
-            font-size: 1.5em;
+            font-size: 2em;
             color: #ff6f61;
             vertical-align: bottom;
             line-height: 0.1em;
@@ -104,7 +104,7 @@
 
         .author {
             text-align: right;
-            font-size: 0.9em;
+            font-size: 1.1em;
             margin-top: 10px;
             color: #666;
             font-family: 'Georgia', serif;
@@ -113,19 +113,19 @@
         .hidden-message {
             display: none;
             font-family: 'Georgia', serif;
-            font-size: 1.1em;
+            font-size: 1.3em;
             margin-top: 20px;
             color: #ff6f61;
         }
 
         #revealButton {
             margin-top: 30px;
-            padding: 10px 20px;
+            padding: 12px 24px;
             background-color: #ff6f61;
             color: white;
             border: none;
             border-radius: 5px;
-            font-size: 1em;
+            font-size: 1.2em;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
@@ -138,12 +138,12 @@
             margin-top: 30px;
             outline: none;
             width: 100%;
-            max-width: 400px;
+            max-width: 500px;
         }
 
         footer {
             margin-top: 30px;
-            font-size: 0.9em;
+            font-size: 1em;
             color: #888;
             font-family: 'Georgia', serif;
         }
@@ -161,8 +161,8 @@
         .snowflake {
             position: absolute;
             top: -10px;
-            width: 15px;
-            height: 15px;
+            width: 20px; /* Augmente la taille des flocons de neige */
+            height: 20px;
             background-color: white;
             opacity: 0.8;
             border-radius: 50%;
@@ -223,16 +223,44 @@
         /* Styles Responsifs */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2em;
+                font-size: 2.5em; /* Ajuste la taille de la police pour les tablettes */
             }
 
             section {
+                font-size: 1.2em; /* Ajuste la taille de la police pour les tablettes */
+                padding: 20px;
+            }
+
+            .quote:before, .quote:after {
+                font-size: 1.8em;
+            }
+
+            .hidden-message {
+                font-size: 1.2em;
+            }
+
+            #revealButton {
                 font-size: 1em;
+                padding: 10px 20px;
+            }
+
+            footer {
+                font-size: 0.9em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2em; /* Ajuste la taille de la police pour les téléphones */
+            }
+
+            section {
+                font-size: 1em; /* Ajuste la taille de la police pour les téléphones */
                 padding: 15px;
             }
 
             .quote:before, .quote:after {
-                font-size: 1.2em;
+                font-size: 1.5em;
             }
 
             .hidden-message {
@@ -246,34 +274,6 @@
 
             footer {
                 font-size: 0.8em;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.5em;
-            }
-
-            section {
-                font-size: 0.9em;
-                padding: 10px;
-            }
-
-            .quote:before, .quote:after {
-                font-size: 1em;
-            }
-
-            .hidden-message {
-                font-size: 0.9em;
-            }
-
-            #revealButton {
-                font-size: 0.8em;
-                padding: 6px 12px;
-            }
-
-            footer {
-                font-size: 0.7em;
             }
         }
     </style>
